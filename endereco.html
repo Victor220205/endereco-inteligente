@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Endereço</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 32px;
+      background: #f9f9f9;
+      color: #222;
+    }
+    form {
+      max-width: 520px;
+      background: #fff;
+      padding: 24px;
+      border-radius: 8px;
+      box-shadow: 0 0 16px rgba(0,0,0,0.08);
+    }
+    label {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      margin-bottom: 16px;
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    button {
+      padding: 12px 20px;
+      background: #2a7ae2;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1f66c1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cadastro de Endereço</h1>
+  <form id="endereco-form" novalidate>
+    <div>
+      <label for="cep">CEP *</label>
+      <input id="cep" name="cep" type="text" maxlength="9" autocomplete="postal-code" placeholder="00000-000" />
+    </div>
+
+    <div>
+      <label for="logradouro">Logradouro *</label>
+      <input id="logradouro" name="logradouro" type="text" minlength="5" placeholder="Rua, Avenida, Travessa..." />
+    </div>
+
+    <div>
+      <label for="numero">Número *</label>
+      <input id="numero" name="numero" type="text" placeholder="Número" />
+    </div>
+
+    <div>
+      <label for="uf">UF *</label>
+      <input id="uf" name="uf" type="text" maxlength="2" placeholder="SP" />
+    </div>
+
+    <div>
+      <label for="complemento">Complemento</label>
+      <input id="complemento" name="complemento" type="text" placeholder="Apartamento, bloco, complemento..." />
+    </div>
+
+    <button type="submit">Cadastrar Endereço</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
