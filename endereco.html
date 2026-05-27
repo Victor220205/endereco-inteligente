@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Endereço</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 32px;
+      background: #f9f9f9;
+      color: #222;
+    }
+    form {
+      max-width: 520px;
+      background: #fff;
+      padding: 24px;
+      border-radius: 8px;
+      box-shadow: 0 0 16px rgba(0,0,0,0.08);
+    }
+    label {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      margin-bottom: 16px;
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    button {
+      padding: 12px 20px;
+      background: #2a7ae2;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1f66c1;
+    }
+    input:focus {
+      border-color: #2a7ae2;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(42, 122, 226, 0.15);
+    }
+    .message-container {
+      margin-bottom: 18px;
+    }
+    .message {
+      padding: 14px 16px;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+    .message-error {
+      background: #fdecea;
+      border: 1px solid #f5c7c7;
+      color: #8a1f1f;
+    }
+    .message-success {
+      background: #e9f8ef;
+      border: 1px solid #b8e0c8;
+      color: #1f5f32;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cadastro de Endereço</h1>
+  <form id="endereco-form" novalidate>
+    <div id="messages" class="message-container" aria-live="polite"></div>
+    <div>
+      <label for="cep">CEP *</label>
+      <input id="cep" name="cep" type="text" maxlength="9" autocomplete="postal-code" inputmode="numeric" placeholder="00000-000" />
+    </div>
+
+    <div>
+      <label for="logradouro">Logradouro *</label>
+      <input id="logradouro" name="logradouro" type="text" minlength="5" placeholder="Rua, Avenida, Travessa..." />
+    </div>
+
+    <div>
+      <label for="cidade">Cidade *</label>
+      <input id="cidade" name="cidade" type="text" minlength="3" placeholder="Cidade" />
+    </div>
+
+    <div>
+      <label for="numero">Número *</label>
+      <input id="numero" name="numero" type="text" inputmode="numeric" placeholder="Número" />
+    </div>
+
+    <div>
+      <label for="uf">UF *</label>
+      <input id="uf" name="uf" type="text" maxlength="2" placeholder="SP" />
+    </div>
+
+    <div>
+      <label for="complemento">Complemento</label>
+      <input id="complemento" name="complemento" type="text" placeholder="Apartamento, bloco, complemento..." />
+    </div>
+
+    <button type="submit">Cadastrar Endereço</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
