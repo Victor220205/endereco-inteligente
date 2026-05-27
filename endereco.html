@@ -43,14 +43,40 @@
     button:hover {
       background: #1f66c1;
     }
+    input:focus {
+      border-color: #2a7ae2;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(42, 122, 226, 0.15);
+    }
+    .message-container {
+      margin-bottom: 18px;
+    }
+    .message {
+      padding: 14px 16px;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+    .message-error {
+      background: #fdecea;
+      border: 1px solid #f5c7c7;
+      color: #8a1f1f;
+    }
+    .message-success {
+      background: #e9f8ef;
+      border: 1px solid #b8e0c8;
+      color: #1f5f32;
+    }
   </style>
 </head>
 <body>
   <h1>Cadastro de Endereço</h1>
   <form id="endereco-form" novalidate>
+    <div id="messages" class="message-container" aria-live="polite"></div>
     <div>
       <label for="cep">CEP *</label>
-      <input id="cep" name="cep" type="text" maxlength="9" autocomplete="postal-code" placeholder="00000-000" />
+      <input id="cep" name="cep" type="text" maxlength="9" autocomplete="postal-code" inputmode="numeric" placeholder="00000-000" />
     </div>
 
     <div>
@@ -59,8 +85,13 @@
     </div>
 
     <div>
+      <label for="cidade">Cidade *</label>
+      <input id="cidade" name="cidade" type="text" minlength="3" placeholder="Cidade" />
+    </div>
+
+    <div>
       <label for="numero">Número *</label>
-      <input id="numero" name="numero" type="text" placeholder="Número" />
+      <input id="numero" name="numero" type="text" inputmode="numeric" placeholder="Número" />
     </div>
 
     <div>
